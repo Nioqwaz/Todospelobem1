@@ -1,13 +1,101 @@
-<section id="sobre-nos" style="padding: 40px; background-color: #f2f2f2;">
-  <h2 style="font-size: 28px; color: #001c54; margin-bottom: 20px;">Sobre Nós</h2>
-  <p style="font-size: 18px; line-height: 1.6;">
-    O <strong>TodosPeloBem</strong> é uma iniciativa social criada para conectar pessoas que desejam ajudar com causas reais e urgentes no Brasil. 
-    Nosso time é formado por cidadãos engajados, desenvolvedores, profissionais da saúde, assistentes sociais e voluntários de todo o país. 
-    Acreditamos no poder da tecnologia e da empatia para transformar realidades, criando uma ponte direta entre doadores e pessoas em situação de vulnerabilidade.
-  </p>
-  <br>
-  <p style="font-size: 18px; line-height: 1.6;">
-    Nosso trabalho é 100% transparente, e cada doação é destinada a projetos verificados, com acompanhamento contínuo e divulgação de resultados. 
-    Somos motivados pelo desejo de construir uma sociedade mais justa, humana e solidária, onde todos possam ter dignidade, oportunidades e esperança.
-  </p>
-</section>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quem Somos - Sindicato</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .quem-somos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+      background-color: #f4f4f4;
+    }
+
+    .quem-somos-texto {
+      flex: 1 1 400px;
+      padding: 20px;
+    }
+
+    .quem-somos-texto h2 {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .quem-somos-texto p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .quem-somos-fotos {
+      flex: 1 1 400px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .quem-somos-fotos img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.quem-somos-fotos img:hover {
+  transform: scale(1.05);
+}
+
+
+    @media (max-width: 768px) {
+      .quem-somos {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="quem-somos">
+    <div class="quem-somos-texto">
+      <h2>Quem Somos</h2>
+      <p>
+        O Sindicato dos Trabalhadores [Categoria/Setor] é uma entidade que representa com firmeza e responsabilidade os interesses de seus associados. Lutamos diariamente pela valorização profissional, melhores condições de trabalho, salários justos e respeito aos direitos conquistados.
+      </p>
+      <p>
+        Atuamos com ética, transparência e diálogo, promovendo ações que fortalecem a união e a participação ativa da categoria. Juntos, construímos um futuro mais digno e justo para todos.
+      </p>
+    </div>
+
+    <div class="quem-somos-fotos">
+  <a href="enzo.html">
+    <img src="5ae39926-3397-4023-83f1-3f6be758a543 (1).jfif" alt="Assembleia dos trabalhadores">
+  </a>
+  <a href="reuniao.html">
+    <img src="062ce5c1-f2f3-4ab2-8901-4d8b7b53edf6.jfif" alt="Reunião sindical">
+  </a>
+  <a href="acao.html">
+    <img src="1738360e-24af-4005-93e8-17b362ce05e4.jfif" alt="Ação de rua">
+  </a>
+  <a href="equipe.html">
+    <img src="126aa3e9-3765-4cb9-b00b-a4ce4c779b1f.jfif" alt="Equipe do sindicato">
+  </a>
+</div>
+
+  </section>
+
+</body>
+</html>
