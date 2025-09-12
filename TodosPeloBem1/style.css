@@ -1,4 +1,4 @@
-
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +12,7 @@ body {
   line-height: 1.6;
 }
 
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
@@ -20,6 +21,7 @@ header {
   background: #0066cc;
   color: #fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex-wrap: wrap; /* permite quebra em telas menores */
 }
 
 header .logo {
@@ -39,6 +41,8 @@ nav {
   display: flex;
   gap: 20px;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav a {
@@ -67,12 +71,15 @@ nav button:hover {
   background: #ffc107;
 }
 
+/* LOGO E TÍTULO */
 .logo-area {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 25px;
   padding: 40px 20px;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .logo-area img.logo-img {
@@ -94,6 +101,7 @@ nav button:hover {
   color: #666;
 }
 
+/* CARROSSEL */
 .carousel-container {
   max-width: 900px;
   margin: 40px auto;
@@ -155,6 +163,7 @@ nav button:hover {
   background: #004a99;
 }
 
+/* FOOTER */
 footer {
   background: #0066cc;
   color: #fff;
@@ -164,6 +173,7 @@ footer {
   font-size: 14px;
 }
 
+/* DARK MODE */
 body.dark {
   background: #1e1e1e;
   color: #eaeaea;
@@ -189,4 +199,78 @@ body.dark .slide {
 
 body.dark footer {
   background: #111;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 992px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .titulo {
+    font-size: 26px;
+  }
+
+  .subtitulo {
+    font-size: 14px;
+  }
+
+  .slide {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .logo-area {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .titulo {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-area img.logo-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .titulo {
+    font-size: 20px;
+  }
+
+  .subtitulo {
+    font-size: 13px;
+  }
+
+  .slide h2 {
+    font-size: 20px;
+  }
+
+  .slide p {
+    font-size: 14px;
+  }
+
+  nav button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
 }
