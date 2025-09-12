@@ -4,39 +4,100 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enzo Matiello Bernegozzi</title>
+
+  <!-- Fonte Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
+    /* ===== GERAL ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      padding: 40px;
-      background-color: #f4f4f4;
+      background-color: #f4f9ff;
       color: #333;
       text-align: center;
+      padding: 50px 20px;
     }
+
+    h1 {
+      font-size: 32px;
+      color: #0066cc;
+      margin-bottom: 20px;
+    }
+
+    /* ===== FOTO ===== */
     img {
       width: 250px;
       height: 250px;
       object-fit: cover;
       border-radius: 50%;
       margin-bottom: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      border: 4px solid #0066cc;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease;
     }
-    a {
-      display: inline-block;
-      margin-top: 30px;
-      text-decoration: none;
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== TEXTO ===== */
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 10px auto;
+      color: #444;
+    }
+
+    strong {
       color: #0066cc;
-      font-weight: bold;
+    }
+
+    /* ===== BOTÃO VOLTAR ===== */
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 35px;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      background: #0066cc;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background: #004a99;
+      transform: translateY(-2px);
     }
   </style>
 </head>
 <body>
 
-  <h1>Enzo Matiello Berngozzi</h1>
-  <img src="d0d61ab0-1e90-4655-866a-308c320bac8d.jfif" alt="Assembleia dos trabalhadores">
-  <p><strong>Cargo:</strong> Representantes da base</p>
-  <p>A assembleia é o coração do sindicato. Aqui os trabalhadores se reúnem para discutir propostas, votar em decisões importantes e construir coletivamente as diretrizes da luta sindical.</p>
+  <h1><i class="fa-solid fa-user"></i> Enzo Matiello Berngozzi</h1>
 
-  <a href="quemsomos.html">← Voltar para quem somos</a>
+  <img src="d0d61ab0-1e90-4655-866a-308c320bac8d.jfif" alt="Assembleia dos trabalhadores">
+
+  <p><strong>Cargo:</strong> Representante da Base</p>
+
+  <p>
+    A assembleia é o coração do sindicato. Aqui os trabalhadores se reúnem para discutir propostas, 
+    votar em decisões importantes e construir coletivamente as diretrizes da luta sindical.
+  </p>
+
+  <a href="quemsomos.html"><i class="fa-solid fa-arrow-left"></i> Voltar para Quem Somos</a>
 
 </body>
 </html>
