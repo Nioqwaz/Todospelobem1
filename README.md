@@ -41,7 +41,7 @@ Nosso objetivo é *aproximar doadores e instituições*, ajudando a transformar 
 ## ⚙️ Setup  
 
 O projeto deve ser baixado por completo, seja por *SSH* ou *ZIP*.  
-A execução acontece através do arquivo *index.html, bastando **clicar duas vezes* nele para abrir no navegador.  
+A execução acontece através do arquivo TodosPeloBem.html, bastando **clicar duas vezes* nele para abrir no navegador.  
 
 ---
 
