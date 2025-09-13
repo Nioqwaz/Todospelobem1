@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quem Somos</title>
 
-  
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    
     * {
       margin: 0;
       padding: 0;
@@ -22,9 +20,97 @@
       background: #f9f9f9;
       color: #333;
       line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
     }
 
-   
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #0066cc;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+      transition: background 0.3s;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    header .brand {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffdd57;
+    }
+
+    nav button {
+      background: #ffdd57;
+      color: #333;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background: #ffc107;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      padding: 40px 20px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .logo-area img.logo-img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #0066cc;
+    }
+
+    .titulo {
+      font-size: 32px;
+      font-weight: 700;
+      color: #0066cc;
+    }
+
+    .subtitulo {
+      font-size: 16px;
+      color: #666;
+    }
+
     .quem-somos {
       display: flex;
       flex-wrap: wrap;
@@ -37,6 +123,7 @@
       border-radius: 12px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       gap: 20px;
+      transition: background 0.3s, color 0.3s;
     }
 
     .quem-somos-texto {
@@ -87,12 +174,11 @@
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
     }
 
-    
     .a {
       position: fixed;
       bottom: 25px;
       right: 25px;
-      background: #0066cc;
+      background: #004a99;
       color: #fff;
       border: none;
       border-radius: 50%;
@@ -107,47 +193,118 @@
       transition: background 0.3s;
     }
 
-    .a {
-      background: #004a99;
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f1f1f1;
+      margin-top: 40px;
+      transition: background 0.3s, color 0.3s;
     }
-  
 
-     @media (max-width: 768px) {
+    /* 🌙 Estilos do modo escuro */
+    body.dark {
+      background: #121212;
+      color: #eee;
+    }
+
+    body.dark header {
+      background: #1f1f1f;
+    }
+
+    body.dark .quem-somos {
+      background: #1e1e1e;
+      color: #ddd;
+    }
+
+    body.dark footer {
+      background: #1f1f1f;
+      color: #bbb;
+    }
+
+    body.dark nav a {
+      color: #ddd;
+    }
+
+    body.dark nav a:hover {
+      color: #ffdd57;
+    }
+
+    @media (max-width: 768px) {
       .quem-somos {
         flex-direction: column;
         text-align: center;
+      }
+      footer {
+        font-size: 12px;
       }
     }
   </style>
 </head>
 <body>
 
+  <header> 
+    <div class="logo">
+      <i class="fa-solid fa-hand-holding-heart fa-2x"></i>
+      <span class="brand">TodosPeloBem</span>
+    </div>
+    <nav>
+      <button id="toggleDarkMode"><i class="fa-solid fa-moon"></i> Modo Escuro</button>
+      <a href="index.html"><i class="fa-solid fa-house"></i> Início</a>
+      <a href="quemsomos.html"><i class="fa-solid fa-users"></i> Sobre Nós</a>
+      <a href="crianças.html"><i class="fa-solid fa-child"></i> Crianças Vulneráveis</a>
+      <a href="pessoas.html"><i class="fa-solid fa-house-chimney-crack"></i> Pessoas sem Moradia</a>
+      <a href="tratamento.html"><i class="fa-solid fa-stethoscope"></i> Tratamentos de Doenças</a>
+      <a href="animais.html"><i class="fa-solid fa-dog"></i> Animais em Situação de Rua</a>
+      <a href="almoço.html"><i class="fa-solid fa-utensils"></i> Almoços Solidários</a>
+    </nav>
+  </header>
+
   <section class="quem-somos">
     <div class="quem-somos-texto">
       <h2><i class="fa-solid fa-users"></i> Quem Somos</h2>
       <p>Somos uma iniciativa dedicada a transformar solidariedade em ação.
          Acreditamos que pequenas atitudes podem gerar grandes mudanças,
-        e por isso conectamos pessoas dispostas a ajudar com causas que realmente precisam de apoio.
-        Nosso compromisso é com a transparência, a empatia e o impacto social, garantindo que cada doação chegue a quem mais necessita.</p>
+         e por isso conectamos pessoas dispostas a ajudar com causas que realmente precisam de apoio.
+         Nosso compromisso é com a transparência, a empatia e o impacto social, garantindo que cada doação chegue a quem mais necessita.</p>
     </div>
 
     <div class="quem-somos-fotos">
       <a href="enzo.html">
-        <img src="d0d61ab0-1e90-4655-866a-308c320bac8d.jfif">
+        <img src="d0d61ab0-1e90-4655-866a-308c320bac8d.jfif" alt="Foto Enzo">
       </a>
       <a href="henrique.html">
-        <img src="1d6a916f-53cb-42dd-b4e2-190a8e920458.jfif">
+        <img src="1d6a916f-53cb-42dd-b4e2-190a8e920458.jfif" alt="Foto Henrique">
       </a>
       <a href="nicolas.html">
-        <img src="4a72c144-8d59-49d4-ba97-a1b44e8c9ebc.jfif">
+        <img src="4a72c144-8d59-49d4-ba97-a1b44e8c9ebc.jfif" alt="Foto Nicolas">
       </a>
       <a href="rafael.html">
-        <img src="3c21b6ba-e6d4-4f18-b5e9-346f07e5caa8.jfif">
+        <img src="3c21b6ba-e6d4-4f18-b5e9-346f07e5caa8.jfif" alt="Foto Rafael">
       </a>
     </div>
   </section>
 
-  <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Voltar para o inicio</a>
+  <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Voltar para o início</a>
 
+  <footer>
+    <div>© 2025 <i class="fa-solid fa-heart"></i> TodosPeloBem - TodosPeloBem.br</div>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById("toggleDarkMode");
+    const body = document.body;
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+
+      // muda ícone e texto do botão
+      if (body.classList.contains("dark")) {
+        toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i> Modo Claro';
+      } else {
+        toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i> Modo Escuro';
+      }
+    });
+  </script>
 </body>
 </html>
+

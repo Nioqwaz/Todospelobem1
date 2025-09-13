@@ -7,26 +7,62 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* 🌙 Modo escuro */
+    body.dark {
+      background-color: #121212;
+      color: #eee;
+    }
+
+    body.dark header {
+      background-color: #1f1f1f;
+    }
+
+    body.dark nav a {
+      color: #ddd;
+    }
+
+    body.dark nav a:hover {
+      color: #ffdd57;
+    }
+
+    body.dark .logo-area {
+      background-color: #1e1e1e;
+      color: #eee;
+    }
+
+    body.dark .carousel-container .slide {
+      background-color: #1e1e1e;
+      color: #eee;
+    }
+
+    body.dark footer {
+      background-color: #1f1f1f;
+      color: #bbb;
+    }
+  </style>
 </head>
 <body>
 
-  
   <header>
     <div class="logo">
       <i class="fa-solid fa-hand-holding-heart fa-2x"></i>
       <span class="brand">TodosPeloBem</span>
     </div>
     <nav>
-      <button id="toggleDarkMode"><i class="fa-solid fa-moon"></i> Modo Escuro</button>
-      <a href="contato.html"><i class="fa-solid fa-circle-info"></i>Contato</a>
-      <a href="quemsomos.html"><i class="fa-solid fa-users"></i> Sobre Nós</a>
-      <a href="#"><i class="fa-solid fa-child"></i> Crianças Vulneráveis</a>
-      <a href="#"><i class="fa-solid fa-house-chimney-crack"></i> Pessoas sem Moradia</a>
-      <a href="#"><i class="fa-solid fa-stethoscope"></i> Tratamentos de Doenças</a>
+    <button id="toggleDarkMode"><i class="fa-solid fa-moon"></i> Modo Escuro</button>
+<a href="contato.html"><i class="fa-solid fa-circle-info"></i> Contato</a>
+<a href="quemsomos.html"><i class="fa-solid fa-users"></i> Sobre Nós</a>
+<a href="crianças.html"><i class="fa-solid fa-child"></i> Crianças Vulneráveis</a>
+<a href="pessoas.html"><i class="fa-solid fa-house-chimney-crack"></i> Pessoas sem Moradia</a>
+<a href="tratamento.html"><i class="fa-solid fa-stethoscope"></i> Tratamentos de Doenças</a>
+<a href="animais.html"><i class="fa-solid fa-dog"></i> Animais em Situação de Rua</a>
+<a href="almoço.html"><i class="fa-solid fa-utensils"></i> Almoços Solidários</a>
+
     </nav>
   </header>
 
-  
   <div class="logo-area">
     <img src="027b20e9-7b62-4b6f-801b-2c1b1009d230.jpeg" alt="Logo" class="logo-img">
     <div>
@@ -35,10 +71,8 @@
     </div>
   </div>
 
-  
   <div class="carousel-container">
     <div class="carousel-slide">
-      
       <div class="slide active">
         <h2><i class="fa-solid fa-bullseye"></i> Nosso Objetivo</h2>
         <p>Lorem ipsum dolor sit amet.</p>
@@ -62,21 +96,35 @@
           <i class="fa-solid fa-stethoscope"></i> Tratamentos de Doenças
         </p>
       </div>
-
     </div>
 
-    
     <div class="carousel-controls">
       <button id="prev"><i class="fa-solid fa-chevron-left"></i></button>
       <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
   </div>
 
- 
   <footer>
-     <div>© 2025 <i class="fa-solid fa-heart"></i> TodosPeloBem - TodosPeloBem.br</div>
+    <div>© 2025 <i class="fa-solid fa-heart"></i> TodosPeloBem - TodosPeloBem.br</div>
   </footer>
 
   <script src="carrosel.js"></script>
+  <script>
+    // Modo escuro
+    const toggleBtn = document.getElementById("toggleDarkMode");
+    const body = document.body;
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+
+      // muda ícone e texto do botão
+      if (body.classList.contains("dark")) {
+        toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i> Modo Claro';
+      } else {
+        toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i> Modo Escuro';
+      }
+    });
+  </script>
 </body>
 </html>
+

@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enzo Matiello Bernegozzi</title>
+  <title>Henrique Miwa da Silva</title>
 
- 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
- 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -23,6 +21,67 @@
       color: #333;
       text-align: center;
       padding: 50px 20px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #0066cc;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+      transition: background 0.3s;
+      margin-bottom: 40px;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    header .brand {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffdd57;
+    }
+
+    nav button {
+      background: #ffdd57;
+      color: #333;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background: #ffc107;
     }
 
     h1 {
@@ -58,7 +117,7 @@
       color: #0066cc;
     }
 
-    a {
+    a.btn-back {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -74,13 +133,58 @@
       transition: 0.3s;
     }
 
-    a:hover {
+    a.btn-back:hover {
       background: #004a99;
       transform: translateY(-2px);
     }
 
-     @media (max-width: 768px) {
-      .quem-somos {
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f1f1f1;
+      margin-top: 50px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* 🌙 Modo escuro */
+    body.dark {
+      background-color: #121212;
+      color: #eee;
+    }
+
+    body.dark header {
+      background-color: #1f1f1f;
+    }
+
+    body.dark nav a {
+      color: #ddd;
+    }
+
+    body.dark nav a:hover {
+      color: #ffdd57;
+    }
+
+    body.dark img {
+      border-color: #bbb;
+    }
+
+    body.dark a.btn-back {
+      background: #1f1f1f;
+      color: #eee;
+      box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+    }
+
+    body.dark a.btn-back:hover {
+      background: #333;
+    }
+
+    body.dark footer {
+      background-color: #1f1f1f;
+      color: #bbb;
+    }
+
+    @media (max-width: 768px) {
+      header {
         flex-direction: column;
         text-align: center;
       }
@@ -88,6 +192,23 @@
   </style>
 </head>
 <body>
+
+  <header>
+    <div class="logo">
+      <i class="fa-solid fa-hand-holding-heart fa-2x"></i>
+      <span class="brand">TodosPeloBem</span>
+    </div>
+ <nav>
+      <button id="toggleDarkMode"><i class="fa-solid fa-moon"></i> Modo Escuro</button>
+      <a href="index.html"><i class="fa-solid fa-house"></i> Início</a>
+      <a href="quemsomos.html"><i class="fa-solid fa-users"></i> Sobre Nós</a>
+      <a href="crianças.html"><i class="fa-solid fa-child"></i> Crianças Vulneráveis</a>
+      <a href="pessoas.html"><i class="fa-solid fa-house-chimney-crack"></i> Pessoas sem Moradia</a>
+      <a href="tratamento.html"><i class="fa-solid fa-stethoscope"></i> Tratamentos de Doenças</a>
+      <a href="animais.html"><i class="fa-solid fa-dog"></i> Animais em Situação de Rua</a>
+      <a href="almoço.html"><i class="fa-solid fa-utensils"></i> Almoços Solidários</a>
+    </nav>
+  </header>
 
   <h1><i class="fa-solid fa-user"></i> Enzo Matiello Berngozzi</h1>
 
@@ -101,7 +222,27 @@
     tornando a mensagem mais acessível e aproximando o público da ideia central.
   </p>
 
-  <a href="quemsomos.html"><i class="fa-solid fa-arrow-left"></i> Voltar para Quem Somos</a>
+  <a href="quemsomos.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Voltar para Quem Somos</a>
+
+  <footer>
+    <div>© 2025 <i class="fa-solid fa-heart"></i> TodosPeloBem - TodosPeloBem.br</div>
+  </footer>
+
+  <script>
+    // Modo escuro
+    const toggleBtn = document.getElementById("toggleDarkMode");
+    const body = document.body;
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+
+      if (body.classList.contains("dark")) {
+        toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i> Modo Claro';
+      } else {
+        toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i> Modo Escuro';
+      }
+    });
+  </script>
 
 </body>
 </html>
