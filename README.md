@@ -12,7 +12,7 @@ O *TodosPeloBem* é um projeto desenvolvido em *HTML, CSS e JavaScript* com o in
 
 ## 👨‍💻 Colaboradores  
 
-- Enzo Matiello Bernegozze  
+- Enzo Matiello Bernegozzi  
 - Henrique Miwa da Silva  
 - Nicolas Silva Santos  
 - Rafael Gomes Pereira  
