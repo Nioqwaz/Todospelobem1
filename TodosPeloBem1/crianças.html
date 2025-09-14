@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crianças Vulneráveis</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #0066cc;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      transition: background 0.3s;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    header .brand {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffdd57;
+    }
+
+    nav button {
+      background: #ffdd57;
+      color: #333;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background: #ffc107;
+    }
+
+    /* Seção introdutória */
+    .intro {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .intro h1 {
+      font-size: 36px;
+      color: #0066cc;
+      margin-bottom: 20px;
+    }
+
+    .intro p {
+      font-size: 18px;
+      color: #444;
+    }
+
+    
+    .cards-container {
+      max-width: 1200px;
+      margin: 0 auto 40px auto;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #0066cc;
+    }
+
+    .card-content p {
+      font-size: 16px;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    .card-content a {
+      text-decoration: none;
+      color: #fff;
+      background: #0066cc;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .card-content a:hover {
+      background: #004a99;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f1f1f1;
+      margin-top: 50px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* Modo escuro */
+    body.dark {
+      background-color: #121212;
+      color: #eee;
+    }
+
+    body.dark header {
+      background-color: #1f1f1f;
+    }
+
+    body.dark nav a {
+      color: #ddd;
+    }
+
+    body.dark nav a:hover {
+      color: #ffdd57;
+    }
+
+    body.dark .cards-container .card {
+      background-color: #1e1e1e;
+      box-shadow: 0 6px 15px rgba(255,255,255,0.05);
+    }
+
+    body.dark .card-content h3,
+    body.dark .card-content p {
+      color: #eee;
+    }
+
+    body.dark .card-content a {
+      background: #444;
+    }
+
+    body.dark .card-content a:hover {
+      background: #666;
+    }
+
+    body.dark footer {
+      background-color: #1f1f1f;
+      color: #bbb;
+    }
+
+    @media (max-width: 768px) {
+      .cards-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+           .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* a imagem ajusta sem cortar */
+  background: #fff; /* fundo neutro para logos com transparência */
+  padding: 10px; /* deixa espaço interno */
+}
+    }
+    .img-redonda {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;         /* Torna a imagem circular */
+  object-fit: cover;          /* Preenche o espaço sem distorcer */
+  display: block;
+  margin: 0 auto;             /* Centraliza horizontalmente */
+  border: 3px solid #0066cc;  /* Borda azul opcional */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra leve */
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <i class="fa-solid fa-hand-holding-heart fa-2x"></i>
+      <span class="brand">TodosPeloBem</span>
+    </div>
+   <nav>
+      <button id="toggleDarkMode"><i class="fa-solid fa-moon"></i> Modo Escuro</button>
+      <a href="index.html"><i class="fa-solid fa-house"></i> Início</a>
+      <a href="quemsomos.html"><i class="fa-solid fa-users"></i> Sobre Nós</a>
+      <a href="crianças.html"><i class="fa-solid fa-child"></i> Crianças Vulneráveis</a>
+      <a href="pessoas.html"><i class="fa-solid fa-house-chimney-crack"></i> Pessoas sem Moradia</a>
+      <a href="tratamento.html"><i class="fa-solid fa-stethoscope"></i> Tratamentos de Doenças</a>
+      <a href="animais.html"><i class="fa-solid fa-dog"></i> Animais em Situação de Rua</a>
+      <a href="almoço.html"><i class="fa-solid fa-utensils"></i> Almoços Solidários</a>
+    </nav>
+  </header>
+
+  <!-- Seção introdutória -->
+  <section class="intro">
+    <h1><i class="fa-solid fa-child"></i>Crianças Vulneráveis</h1>
+    <img src="todos4.png" alt="tratamento" class="img-redonda">
+    <p>
+        Nossa startup procurou os melhores centros de doações da região e selecionou cuidadosamente cada um com base na categoria "Crianças Vulneráveis".
+  Aqui você encontrará organizações confiáveis que trabalham diretamente para melhorar a vida de crianças em situação de risco.
+    </p>
+  </section>
+
+  <!-- Seção de cards -->
+   <section class="cards-container">
+
+   <div class="card">
+  <img src="Captura de tela_13-9-2025_215959_www.repense.ong.br.jpeg" alt="Repense">
+  <div class="card-content">
+    <h3>Repense</h3>
+    <p>ONG que transforma vidas de crianças e famílias em vulnerabilidade, oferece doações, roupas, atendimento comunitário etc.</p>
+    <a href="https://www.repense.ong.br/" target="_blank">Visitar site</a>
+  </div>
+</div>
+
+
+    <div class="card">
+      <img src="Captura de tela_13-9-2025_2272_inter.atados.com.br.jpeg" alt="Osc Esperança">
+      <div class="card-content">
+        <h3>OSC Esperança</h3>
+        <p>  A tua em São Paulo, com unidades para crianças, jovens, adolescentes, idosos em situação de vulnerabilidade, com educação, cultura, esporte, lazer.</p>
+        <a href="https://inter.atados.com.br/" target="_blank">Visitar site</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Captura de tela_13-9-2025_221154_fadc.org.br.jpeg" alt="Fundaçao Abrinq">
+      <div class="card-content">
+        <h3>Fundação Abrinq</h3>
+        <p>atende crianças e adolescentes, famílias vulneráveis, fornecendo alimentos, roupas, assistência.</p>
+        <a href="https://fadc.org.br/" target="_blank">Visitar site</a>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div>© 2025 <i class="fa-solid fa-heart"></i> TodosPeloBem - TodosPeloBem.br</div>
+  </footer>
+
+  <!-- Script Modo Escuro -->
+  <script>
+    const toggleBtn = document.getElementById("toggleDarkMode");
+    const body = document.body;
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i> Modo Claro';
+      } else {
+        toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i> Modo Escuro';
+      }
+    });
+  </script>
+</body>
+</html>
