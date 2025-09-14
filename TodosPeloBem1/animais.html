@@ -223,6 +223,13 @@
         flex-direction: column;
         text-align: center;
       }
+      .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* a imagem ajusta sem cortar */
+  background: #fff; /* fundo neutro para logos com transparência */
+  padding: 10px; /* deixa espaço interno */
+}
     }
 
   </style>
@@ -243,7 +250,7 @@
       <a href="pessoas.html"><i class="fa-solid fa-house-chimney-crack"></i> Pessoas sem Moradia</a>
       <a href="tratamento.html"><i class="fa-solid fa-stethoscope"></i> Tratamentos de Doenças</a>
       <a href="animais.html"><i class="fa-solid fa-dog"></i> Animais em Situação de Rua</a>
-      <a href="almoços.html"><i class="fa-solid fa-utensils"></i> Almoços Solidários</a>
+      <a href="almoço.html"><i class="fa-solid fa-utensils"></i> Almoços Solidários</a>
     </nav>
   </header>
 
@@ -254,39 +261,41 @@
       Nossa startup selecionou os melhores centros e organizações que cuidam de animais em situação de rua. 
       Aqui você encontra instituições confiáveis para apoiar, adotar ou doar para esses animais que precisam de cuidados.
     </p>
-  </section>
+    <section class="cards-container">
 
-  <!-- Cards de organizações -->
-  <section class="cards-container">
-
-    <div class="card">
-      <img src="https://www.adoteumafilhavirtual.com.br/images/logo.png" alt="ADOTE UM FILHO">
-      <div class="card-content">
-        <h3>Adote um Filho</h3>
-        <p>Organização dedicada ao resgate e adoção de cães e gatos em situação de abandono.</p>
-        <a href="https://www.adoteumafilhavirtual.com.br/" target="_blank">Visitar site</a>
-      </div>
+  <div class="card">
+    <img src="Captura de tela_13-9-2025_22333_www.caosemdono.com.br.jpeg" alt="Cão Sem Dono">
+    <div class="card-content">
+      <h3>Cão Sem Dono</h3>
+      <p>Desde 2005, resgata e cuida de cães abandonados em SP e MG. Mantém abrigos com estrutura veterinária e promove adoções responsáveis.</p>
+      <a href="https://www.caosemdono.com.br/" target="_blank">Visitar site</a>
     </div>
+  </div>
 
-    <div class="card">
-      <img src="https://abrigopets.org.br/wp-content/uploads/2020/07/logo.png" alt="Abrigo Pets">
-      <div class="card-content">
-        <h3>Abrigo Pets</h3>
-        <p>Oferece abrigo e cuidados a animais abandonados, incentivando doações e adoções responsáveis.</p>
-        <a href="https://abrigopets.org.br/" target="_blank">Visitar site</a>
-      </div>
+  <div class="card">
+    <img src="Captura de tela_13-9-2025_223846_sospetalpha.org.br.jpeg" alt="UPAS Salvador">
+    <div class="card-content">
+      <h3>SOS Pet Alpha</h3>
+      <p>Organização sem fins lucrativos que resgata, reabilita e promove adoção de cães e gatos em SP. Atua com castração, campanhas educativas e fiscalização contra maus-tratos.</p>
+      <a href="https://sospetalpha.org.br/" target="_blank">Visitar página</a>
     </div>
+  </div>
 
-    <div class="card">
-      <img src="https://www.amigosdocampo.org.br/logo.png" alt="Amigos do Campo">
-      <div class="card-content">
-        <h3>Amigos do Campo</h3>
-        <p>Instituição que resgata animais em situação de rua e promove programas de saúde, alimentação e adoção.</p>
-        <a href="https://www.amigosdocampo.org.br/" target="_blank">Visitar site</a>
-      </div>
+  <div class="card">
+    <img src="Captura de tela_13-9-2025_222839_institutoamparanimal.org.br.jpeg" alt="Ampara Animal">
+    <div class="card-content">
+      <h3>Ampara Animal</h3>
+      <p>Atuação nacional com apoio a mais de 450 abrigos. Realiza campanhas de adoção, castração e cuidados veterinários para cães e gatos.</p>
+      <a href="https://www.amparanimal.org.br/" target="_blank">Visitar site</a>
     </div>
+  </div>
 
-  </section>
+
+
+ 
+</section>
+
+
 
   <!-- Footer -->
   <footer>
