@@ -213,7 +213,16 @@
 }
 
     }
-
+.img-redonda {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;         /* Torna a imagem circular */
+  object-fit: cover;          /* Preenche o espaço sem distorcer */
+  display: block;
+  margin: 0 auto;             /* Centraliza horizontalmente */
+  border: 3px solid #0066cc;  /* Borda azul opcional */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra leve */
+}
   </style>
 </head>
 <body>
@@ -236,6 +245,7 @@
     </nav>
   </header>
   <h1><i class="fa-solid fa-child"></i> Centros de Doações Selecionados</h1>
+  <img src="todos3.png" alt="tratamento" class="img-redonda">
 <br><br>
 <p>
   Nossa startup procurou os melhores centros de doações da região e selecionou cuidadosamente cada um com base na categoria "Crianças Vulneráveis".

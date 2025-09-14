@@ -231,6 +231,16 @@
   padding: 10px; /* deixa espaço interno */
 }
     }
+    .img-redonda {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;         /* Torna a imagem circular */
+  object-fit: cover;          /* Preenche o espaço sem distorcer */
+  display: block;
+  margin: 0 auto;             /* Centraliza horizontalmente */
+  border: 3px solid #0066cc;  /* Borda azul opcional */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra leve */
+}
 
   </style>
 </head>
@@ -257,6 +267,7 @@
   <!-- Seção introdutória -->
   <section class="intro">
     <h1><i class="fa-solid fa-utensils"></i> Almoços Solidários</h1>
+    <img src="todos6.png" alt="tratamento" class="img-redonda">
     <p>
       Nossa startup selecionou os melhores projetos e organizações que distribuem alimentos para pessoas em vulnerabilidade. 
       Aqui você encontra instituições confiáveis para apoiar e participar dessas ações solidárias.

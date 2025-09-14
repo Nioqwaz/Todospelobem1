@@ -123,11 +123,7 @@
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
+  
 
     .card-content {
       padding: 20px;
@@ -223,14 +219,24 @@
         flex-direction: column;
         text-align: center;
       }
-       .card img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain; /* a imagem ajusta sem cortar */
-  background: #fff; /* fundo neutro para logos com transparência */
-  padding: 10px; /* deixa espaço interno */
-}
+
+
+  
+
     }
+.img-redonda {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;         /* Torna a imagem circular */
+  object-fit: cover;          /* Preenche o espaço sem distorcer */
+  display: block;
+  margin: 0 auto;             /* Centraliza horizontalmente */
+  border: 3px solid #0066cc;  /* Borda azul opcional */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra leve */
+}
+
+
+
 
   </style>
 </head>
@@ -257,6 +263,9 @@
   <!-- Seção introdutória -->
   <section class="intro">
     <h1><i class="fa-solid fa-stethoscope"></i> Centros de Doações para Tratamentos</h1>
+<img src="todos5.png" alt="tratamento" class="img-redonda">
+
+
     <p>
       Nossa startup selecionou os melhores centros de doações e organizações que apoiam tratamentos de saúde e assistência médica.
       Aqui você encontra instituições confiáveis que ajudam pacientes e famílias em situação de vulnerabilidade.

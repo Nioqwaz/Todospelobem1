@@ -3,112 +3,201 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Doações gov.br</title>
+  <title>TodosPeloBem</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
 
   <style>
-    /* 🌙 Modo escuro */
-    body.dark {
-      background-color: #121212;
-      color: #eee;
-    }
+    /* ===== RESET & FONT ===== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
 
-    body.dark header {
-      background-color: #1f1f1f;
-    }
+/* ===== MODO ESCURO ===== */
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+body.dark header,
+body.dark footer,
+body.dark .logo-area,
+body.dark .carousel-slide .slide {
+  background-color: #1f1f1f;
+  color: #eee;
+}
+body.dark nav a { color: #ddd; }
+body.dark nav a:hover { color: #ffdd57; }
 
-    body.dark nav a {
-      color: #ddd;
-    }
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #0066cc; /* azul */
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top:0;
+  z-index: 100;
+}
+header .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+nav a:hover { color: #ffdd57; }
+#toggleDarkMode {
+  cursor: pointer;
+  background-color: #ffdd57; /* amarelo */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #333;
+}
+#toggleDarkMode:hover {
+  background-color: #ffc107;
+}
 
-    body.dark nav a:hover {
-      color: #ffdd57;
-    }
+/* ===== LOGO AREA ===== */
+.logo-area {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #0066cc; /* azul */
+  color: #fff;
+}
+.logo-area h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.logo-area p {
+  color: #333; /* texto escuro para fundo claro */
+}
 
-    body.dark .logo-area {
-      background-color: #1e1e1e;
-      color: #eee;
-    }
 
-    body.dark .carousel-container .slide {
-      background-color: #1e1e1e;
-      color: #eee;
-    }
+/* ===== QUADRADO ===== */
+.quadrado {
+  background-color: #fff;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #ff6b6b, #feca57, #48dbfb, #1dd1a1, #ff6b6b);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.quadrado h1 {
+  margin-bottom: 20px;
+  color: #0066cc; /* azul */
+}
+.quadrado p {
+  color: #555;
+  margin-bottom: 15px;
+}
+.quadrado ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  text-align: left;
+}
+.quadrado li {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
 
-    body.dark footer {
-      background-color: #1f1f1f;
-      color: #bbb;
-    }
-
-    /* 🎠 Carrossel básico */
-    .carousel-slide .slide {
-      display: none;
-      transition: opacity 0.5s ease-in-out;
-    }
-
-    .carousel-slide .slide.active {
-      display: block;
-    }
-
-    .carousel-controls {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .carousel-controls button {
-      background-color: #ffdd57;
-      border: none;
-      padding: 10px 15px;
-      margin: 0 5px;
-      cursor: pointer;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-
-    .carousel-controls button:hover {
-      background-color: #ffc107;
-    }
-    /* 🔧 Ajuste de tamanho do carrossel */
+/* ===== CARROSSEL ===== */
 .carousel-container {
   max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
+  margin: 0 auto 50px auto;
+  padding: 0 20px;
 }
-
 .carousel-slide {
   position: relative;
-  width: 100%;
-  height: auto;
-  min-height: 300px;
 }
-
 .carousel-slide .slide {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
+  display: none;
   padding: 20px;
   border-radius: 10px;
   background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.carousel-slide .slide.active { display: block; }
+.carousel-slide .slide img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+.carousel-controls {
+  text-align: center;
+  margin-top: 15px;
+}
+.carousel-controls button {
+  background-color: #ffdd57;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.carousel-controls button:hover {
+  background-color: #ffc107;
 }
 
-.carousel-slide .slide img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 10px;
-  border-radius: 8px;
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
 }
+
+/* ===== RESPONSIVO ===== */
+@media(max-width:768px){
+  header { flex-direction: column; gap:10px; }
+  nav a { display: block; margin: 5px 0; }
+  .quadrado { padding: 20px; max-width: 90%; }
+  .carousel-slide .slide img { max-height: 250px; }
+}
+.intro p,
+.quadrado p {
+  color: #333;
+}
+li {
+  color: #333; /* texto escuro para fundo claro */
+}
+body.dark li {
+  color: #eee; /* texto claro para fundo escuro */
+}
+
+
+
   </style>
 </head>
 <body>
 
   <header>
-    <div class="logo">
-      <i class="fa-solid fa-hand-holding-heart fa-2x"></i>
-      <span class="brand">TodosPeloBem</span>
-    </div>
+    <div class="logo"><i class="fa-solid fa-hand-holding-heart"></i> TodosPeloBem</div>
     <nav>
       <button id="toggleDarkMode"><i class="fa-solid fa-moon"></i> Modo Escuro</button>
       <a href="contato.html"><i class="fa-solid fa-circle-info"></i> Contato</a>
@@ -122,10 +211,21 @@
   </header>
 
   <div class="logo-area">
-    <img src="027b20e9-7b62-4b6f-801b-2c1b1009d230.jpeg" alt="Logo" class="logo-img">
-    <div>
-      <h1 class="titulo"><i class="fa-solid fa-heart"></i> Sistema de Doações</h1>
-      <p class="subtitulo">Conectando solidariedade e impacto real</p>
+    <h1><i class="fa-solid fa-heart"></i> Apresentamos o TodosPeloBem</h1>
+  
+
+    <div class="quadrado">
+      <h1>TodosPeloBem</h1>
+      <p>O projeto <strong>TodosPeloBem</strong> nasceu com o propósito de conectar pessoas que desejam ajudar com ONGs que realizam doações. Muitas vezes, quem quer contribuir enfrenta dúvidas sobre por onde começar, quais instituições são confiáveis e em quais áreas sua ajuda pode gerar maior impacto.</p>
+      <p>Nosso site funciona como uma <strong>central de informações organizada</strong>, reunindo em um único lugar links, descrições e contatos de ONGs em diferentes áreas:</p>
+      <ul>
+        <li>🍞 Alimentação e combate à fome</li>
+        <li>🏠 Apoio a pessoas em situação de rua</li>
+        <li>🐾 Cuidados com animais abandonados</li>
+        <li>📚 Projetos sociais e educacionais</li>
+        <li>❤️ Apoio à saúde e qualidade de vida</li>
+      </ul>
+      <p>Nosso objetivo é aproximar doadores e instituições, transformando boas intenções em ações concretas e fortalecendo o impacto social positivo.</p>
     </div>
   </div>
 
@@ -133,46 +233,30 @@
     <div class="carousel-slide">
       <div class="slide active">
         <h2><i class="fa-solid fa-child"></i> Crianças Vulneráveis</h2>
-        <p>Apoio a crianças em situação de vulnerabilidade, oferecendo cuidados, proteção e educação.  
-        Trabalhamos para garantir um futuro mais justo e cheio de oportunidades.</p>
+        <img src="todos1.jpeg" alt="Crianças Vulneráveis">
+        <p>Apoio a crianças em situação de vulnerabilidade, oferecendo cuidados, proteção e educação.</p>
       </div>
-
       <div class="slide">
         <h2><i class="fa-solid fa-house-chimney-crack"></i> Pessoas sem Moradia</h2>
-        <p>Oferecemos acolhimento e recursos para pessoas que não têm um lar.  
-        Nossa missão é proporcionar dignidade e reintegração social.</p>
+        <img src="bem3.jpeg" alt="Pessoas sem Moradia">
+        <p>Oferecemos acolhimento e recursos para pessoas que não têm um lar, proporcionando dignidade e reintegração social.</p>
       </div>
-
       <div class="slide">
         <h2><i class="fa-solid fa-stethoscope"></i> Tratamentos de Doenças</h2>
-        <p>Apoio a instituições que fornecem acesso a cuidados médicos essenciais.  
-        Lutamos para que todos tenham direito à saúde e esperança.</p>
+        <img src="bem4.jpeg" alt="Tratamentos de Doenças">
+        <p>Apoio a instituições que fornecem acesso a cuidados médicos essenciais.</p>
       </div>
-
       <div class="slide">
         <h2><i class="fa-solid fa-dog"></i> Animais em Situação de Rua</h2>
-        <p>Contribuímos com ONGs que resgatam e cuidam de animais abandonados.  
-        Nosso objetivo é garantir carinho, alimentação e um novo lar.</p>
+        <img src="bem1.jpeg" alt="Animais em Situação de Rua">
+        <p>Contribuímos com ONGs que resgatam e cuidam de animais abandonados.</p>
       </div>
-
       <div class="slide">
         <h2><i class="fa-solid fa-utensils"></i> Almoços Solidários</h2>
-        <p>Organizamos almoços e cafés solidários para pessoas em situação de vulnerabilidade.  
-        Um gesto simples que leva acolhimento e esperança.</p>
-      </div>
-
-      <div class="slide">
-        <h2><i class="fa-solid fa-seedling"></i> Nossa Startup</h2>
-        <img src="OIP.webp" alt="Nossa Startup">
-        <p class="desc">
-          O <strong>TodosPeloBem</strong> é uma startup social criada com o propósito de conectar solidariedade e impacto real.  
-          Nosso objetivo é oferecer uma plataforma transparente e acessível para que pessoas e empresas possam contribuir diretamente em ações que transformam vidas. 
-          <br><br>
-          
-        </p>
+        <img src="bem2.jpeg" alt="Almoços Solidários">
+        <p>Organizamos almoços e cafés solidários para pessoas em situação de vulnerabilidade.</p>
       </div>
     </div>
-
     <div class="carousel-controls">
       <button id="prev"><i class="fa-solid fa-chevron-left"></i></button>
       <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
@@ -182,71 +266,56 @@
   <footer>
     <div>© 2025 <i class="fa-solid fa-heart"></i> TodosPeloBem - TodosPeloBem.br</div>
   </footer>
-<script>
-  // 🌙 Modo escuro
-  const toggleBtn = document.getElementById("toggleDarkMode");
-  const body = document.body;
 
-  toggleBtn.addEventListener("click", () => {
-    body.classList.toggle("dark");
-    toggleBtn.innerHTML = body.classList.contains("dark")
-      ? '<i class="fa-solid fa-sun"></i> Modo Claro'
-      : '<i class="fa-solid fa-moon"></i> Modo Escuro';
-  });
+  <script>
+    // 🌙 Modo escuro
+    const toggleBtn = document.getElementById("toggleDarkMode");
+    const body = document.body;
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      toggleBtn.innerHTML = body.classList.contains("dark")
+        ? '<i class="fa-solid fa-sun"></i> Modo Claro'
+        : '<i class="fa-solid fa-moon"></i> Modo Escuro';
+    });
 
-  // 🎠 Carrossel com transição suave e autoplay
-  document.addEventListener("DOMContentLoaded", () => {
-    const slides = document.querySelectorAll(".carousel-slide .slide");
-    const prevBtn = document.getElementById("prev");
-    const nextBtn = document.getElementById("next");
-    let currentIndex = 0;
-    let interval;
+    // 🎠 Carrossel
+    document.addEventListener("DOMContentLoaded", () => {
+      const slides = document.querySelectorAll(".carousel-slide .slide");
+      const prevBtn = document.getElementById("prev");
+      const nextBtn = document.getElementById("next");
+      let currentIndex = 0;
+      let interval;
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.style.opacity = "0";
-        slide.classList.remove("active");
-      });
-      slides[index].classList.add("active");
-      slides[index].style.opacity = "1";
-    }
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.style.display = "none";
+        });
+        slides[index].style.display = "block";
+      }
 
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % slides.length;
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+      }
+
+      function startAutoSlide() { interval = setInterval(nextSlide, 5000); }
+      function resetAutoSlide() { clearInterval(interval); startAutoSlide(); }
+
+      prevBtn.addEventListener("click", () => { prevSlide(); resetAutoSlide(); });
+      nextBtn.addEventListener("click", () => { nextSlide(); resetAutoSlide(); });
+
       showSlide(currentIndex);
-    }
-
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      showSlide(currentIndex);
-    }
-
-    function startAutoSlide() {
-      interval = setInterval(nextSlide, 5000); // 5 segundos
-    }
-
-    function resetAutoSlide() {
-      clearInterval(interval);
       startAutoSlide();
-    }
-
-    prevBtn.addEventListener("click", () => {
-      prevSlide();
-      resetAutoSlide();
     });
-
-    nextBtn.addEventListener("click", () => {
-      nextSlide();
-      resetAutoSlide();
-    });
-
-    // Inicializa
-    showSlide(currentIndex);
-    startAutoSlide();
-  });
-</script>
+  </script>
 
 </body>
 </html>
+
 
 
