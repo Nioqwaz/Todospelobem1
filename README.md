@@ -57,3 +57,7 @@ A execução acontece através da pasta TodosPeloBem1, bastando **clicar duas ve
 ## 📄 Licença  
 
 Este projeto é de caráter *educacional* e *social*, sem fins lucrativos.
+# Vídeo de Apresentação - Todos Pelo Bem
+
+[▶️ Clique aqui para assistir ao vídeo da apresentaçao](https://1drv.ms/v/c/c718ffd2fb65f61e/EbGhsLCqW79MgYfA6j-WIwkBqRl2YTFh2EexW1eCmeiTow?e=8g3Imn)
+
